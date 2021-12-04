@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(
-          elevation: 0.0,
+          elevation: 1.0,
           backgroundColor: Colors.white,
           systemOverlayStyle:
-              SystemUiOverlayStyle(statusBarColor: Colors.white),
+              SystemUiOverlayStyle(statusBarColor: Colors.black),
           titleTextStyle: TextStyle(
               color: Colors.black, fontSize: 18.0, fontWeight: FontWeight.w500),
           iconTheme: IconThemeData(color: Colors.black),

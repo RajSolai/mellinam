@@ -26,6 +26,13 @@ class _TestScreenState extends State<TestScreen> {
   final String _language = 'ta';
   late ConfettiController _controllerCenter;
 
+  @override
+  void initState() {
+    super.initState();
+    _controllerCenter =
+        ConfettiController(duration: const Duration(seconds: 10));
+  }
+
   void onPanUpdateEvent(details) {
     setState(() {
       RenderObject? object = context.findRenderObject();
@@ -35,12 +42,18 @@ class _TestScreenState extends State<TestScreen> {
     });
   }
 
+  void clearPad() {
+    setState(() {
+      _points.clear();
+    });
+  }
+
   Future<void> recognizeText() async {
     try {
       final candidates =
           await digitalInkRecogniser.readText(_points, _language);
       var text = candidates[0].text;
-      if (text == "asdf") {
+      if (text == widget.letterToCheck) {
         isPassed = true;
       }
       setState(() {});
@@ -62,7 +75,7 @@ class _TestScreenState extends State<TestScreen> {
               controllerCenter: _controllerCenter,
               returnScreen: widget.returnScreen,
               context: context)
-          : buildTestPage(_points, onPanUpdateEvent, recognizeText),
+          : buildTestPage(_points, onPanUpdateEvent, recognizeText, clearPad),
     );
   }
 

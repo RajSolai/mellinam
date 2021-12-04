@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 Widget buildConfettiPage({controllerCenter, returnScreen, context}) {
-  controllerCenter = ConfettiController(duration: const Duration(seconds: 10));
   controllerCenter.play();
   return SafeArea(
     child: Stack(

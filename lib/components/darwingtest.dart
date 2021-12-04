@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mellinam/components/signature.dart';
 
 Widget buildTestPage(
-    List<Offset?> _points, onPanUpdateFunction, recognizeText) {
+    List<Offset?> _points, onPanUpdateFunction, recognizeText, clearPad) {
   return SafeArea(
     child: SingleChildScrollView(
       child: Column(
@@ -40,6 +41,14 @@ Widget buildTestPage(
             ),
           ),
           const SizedBox(height: 8),
+          Container(
+            child: Row(
+              children: [
+                CupertinoButton.filled(
+                    child: Text("Clear"), onPressed: clearPad)
+              ],
+            ),
+          )
         ],
       ),
     ),

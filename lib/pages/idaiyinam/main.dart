@@ -3,16 +3,16 @@ import 'package:mellinam/components/lettercart.dart';
 import 'package:mellinam/components/menucart.dart';
 import 'package:mellinam/pages/tutorial.dart';
 
-var groupName = "வல்லினம்";
+var groupName = "இடையினம்";
 
-class VallinamHome extends StatelessWidget {
-  const VallinamHome({Key? key}) : super(key: key);
+class IdaiyinamScreen extends StatelessWidget {
+  const IdaiyinamScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("வல்லின வார்த்தைகள்"),
+        title: Text("இடையின  வார்த்தைகள்"),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -24,48 +24,48 @@ class VallinamHome extends StatelessWidget {
                   LetterCard(
                     returnScreen: this,
                     group: groupName,
-                    letter: "க",
-                    animation: "assets/animations/ka-animation.riv",
-                  ),
-                  LetterCard(
-                    returnScreen: this,
-                    group: groupName,
-                    letter: "ச",
-                    animation: "assets/animations/sa-animation.riv",
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  LetterCard(
-                    returnScreen: this,
-                    group: groupName,
-                    letter: "ட",
-                    animation: "assets/animations/da-animation.riv",
-                  ),
-                  LetterCard(
-                    returnScreen: this,
-                    group: groupName,
-                    letter: "த",
-                    animation: "assets/animations/tha-animation.riv",
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  LetterCard(
-                    returnScreen: this,
-                    group: groupName,
-                    letter: "ப",
-                    animation: "assets/animations/pa-animation.riv",
+                    letter: "ய",
+                    animation: "assets/animations/ya-animation.riv",
                   ),
                   LetterCard(
                     returnScreen: this,
                     group: groupName,
                     letter: "ர",
                     animation: "assets/animations/ra-animation.riv",
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  LetterCard(
+                    returnScreen: this,
+                    group: groupName,
+                    letter: "ல",
+                    animation: "assets/animations/mel-la-animation.riv",
+                  ),
+                  LetterCard(
+                    returnScreen: this,
+                    group: groupName,
+                    letter: "வ",
+                    animation: "assets/animations/va-animation.riv",
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  LetterCard(
+                    returnScreen: this,
+                    group: groupName,
+                    letter: "ழ",
+                    animation: "assets/animations/zlha-animation.riv",
+                  ),
+                  LetterCard(
+                    returnScreen: this,
+                    group: groupName,
+                    letter: "ள",
+                    animation: "assets/animations/kil-animation.riv",
                   ),
                 ],
               )
