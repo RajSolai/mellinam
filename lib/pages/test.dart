@@ -1,6 +1,9 @@
 import 'package:confetti/confetti.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_ml_kit/google_ml_kit.dart';
+import 'package:mellinam/components/confetti.dart';
+import 'package:mellinam/components/darwingtest.dart';
 
 class TestScreen extends StatefulWidget {
   final Widget returnScreen;
@@ -14,83 +17,38 @@ class TestScreen extends StatefulWidget {
 }
 
 class _TestScreenState extends State<TestScreen> {
-  bool isPassed = true;
+  bool isPassed = false;
+  LanguageModelManager languageModelManager =
+      GoogleMlKit.vision.languageModelManager();
+  DigitalInkRecogniser digitalInkRecogniser =
+      GoogleMlKit.vision.digitalInkRecogniser();
+  List<Offset?> _points = <Offset>[];
+  final String _language = 'ta';
   late ConfettiController _controllerCenter;
 
-  Widget buildTestPage() {
-    return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [],
-        ),
-      ),
-    );
+  void onPanUpdateEvent(details) {
+    setState(() {
+      RenderObject? object = context.findRenderObject();
+      final _localPosition =
+          (object as RenderBox?)?.globalToLocal(details.localPosition);
+      _points = List.from(_points)..add(_localPosition);
+    });
   }
 
-  Widget buildConfettiPage() {
-    _controllerCenter =
-        ConfettiController(duration: const Duration(seconds: 10));
-    _controllerCenter.play();
-    return SafeArea(
-      child: Stack(
-        children: [
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              margin:
-                  EdgeInsets.only(top: MediaQuery.of(context).size.height / 3),
-              child: Column(
-                children: [
-                  Image.asset(
-                    "assets/images/trophy.png",
-                    height: MediaQuery.of(context).size.height / 6,
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  Text(
-                    "வாழ்த்துக்கள்",
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 28.0),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  CupertinoButton(
-                    color: Colors.purple,
-                    child: Text("தொடரவும்"),
-                    onPressed: () => {
-                      Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                            builder: (context) => widget.returnScreen),
-                      )
-                    },
-                  )
-                ],
-              ),
-            ),
-          ),
-          Align(
-            alignment: Alignment.topCenter,
-            child: ConfettiWidget(
-              confettiController: _controllerCenter,
-              blastDirectionality: BlastDirectionality
-                  .explosive, // don't specify a direction, blast randomly
-              shouldLoop:
-                  true, // start again as soon as the animation is finished
-              colors: const [
-                Colors.green,
-                Colors.blue,
-                Colors.pink,
-                Colors.orange,
-                Colors.purple
-              ], // manually specify the colors to be used
-            ),
-          ),
-        ],
-      ),
-    );
+  Future<void> recognizeText() async {
+    try {
+      final candidates =
+          await digitalInkRecogniser.readText(_points, _language);
+      var text = candidates[0].text;
+      if (text == "asdf") {
+        isPassed = true;
+      }
+      setState(() {});
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text(e.toString()),
+      ));
+    }
   }
 
   @override
@@ -99,7 +57,12 @@ class _TestScreenState extends State<TestScreen> {
       appBar: AppBar(
         title: Text("'${widget.letterToCheck}' எழுத்து பயிற்சி"),
       ),
-      body: isPassed ? buildConfettiPage() : buildTestPage(),
+      body: isPassed
+          ? buildConfettiPage(
+              controllerCenter: _controllerCenter,
+              returnScreen: widget.returnScreen,
+              context: context)
+          : buildTestPage(_points, onPanUpdateEvent, recognizeText),
     );
   }
 
