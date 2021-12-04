@@ -12,8 +12,8 @@ class IdaiyinamScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("இடையின  வார்த்தைகள்"),
-      ),
+          title: Text("இடையின  வார்த்தைகள்"),
+         ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -65,7 +65,7 @@ class IdaiyinamScreen extends StatelessWidget {
                     returnScreen: this,
                     group: groupName,
                     letter: "ள",
-                    animation: "assets/animations/kil-animation.riv",
+                    animation: "assets/animations/kil-la-animation.riv",
                   ),
                 ],
               )

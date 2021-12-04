@@ -35,6 +35,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_ml_kit: ^0.7.3
   rive: ^0.7.33
+  path_provider: ^2.0.7
+  path: ^1.8.0
+  sembast: ^3.1.1
   confetti: ^0.6.0
 
 dev_dependencies:
@@ -66,8 +69,16 @@ flutter:
     - assets/animations/pa-animation.riv
     - assets/animations/ra-animation.riv
     - assets/animations/tha-animation.riv
+    #
+    - assets/animations/kil-la-animation.riv
+    - assets/animations/mel-la-animation.riv
+    - assets/animations/ya-animation.riv
+    - assets/animations/zlha-animation.riv
     - assets/animations/ra-vali-animation.riv
+    - assets/animations/va-animation.riv
+    #
     - assets/images/trophy.png
+    - assets/letters.db
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

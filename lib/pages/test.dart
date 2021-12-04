@@ -4,12 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 import 'package:mellinam/components/confetti.dart';
 import 'package:mellinam/components/darwingtest.dart';
+import 'package:mellinam/services/db.dart';
 
 class TestScreen extends StatefulWidget {
   final Widget returnScreen;
   final String letterToCheck;
+  final String groupName;
   TestScreen(
-      {Key? key, required this.returnScreen, required this.letterToCheck})
+      {Key? key,
+      required this.returnScreen,
+      required this.letterToCheck,
+      required this.groupName})
       : super(key: key);
 
   @override
@@ -55,6 +60,8 @@ class _TestScreenState extends State<TestScreen> {
       var text = candidates[0].text;
       if (text == widget.letterToCheck) {
         isPassed = true;
+        Respository()
+            .addLetter("${widget.letterToCheck} - ${widget.groupName}");
       }
       setState(() {});
     } catch (e) {

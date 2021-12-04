@@ -48,6 +48,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                     context,
                     CupertinoPageRoute(
                       builder: (context) => TestScreen(
+                        groupName: widget.groupName,
                         letterToCheck: widget.letterName,
                         returnScreen: widget.returnScreen,
                       ),
