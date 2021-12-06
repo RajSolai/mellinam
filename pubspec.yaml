@@ -77,6 +77,13 @@ flutter:
     - assets/animations/ra-vali-animation.riv
     - assets/animations/va-animation.riv
     #
+    - assets/animations/nga-animation.riv
+    - assets/animations/nga2-animation.riv
+    - assets/animations/na1-animation.riv
+    - assets/animations/nya-animation.riv
+    - assets/animations/ma-animation.riv
+    # - assets/animations/na2-animation.riv
+    #
     - assets/images/trophy.png
     - assets/letters.db
   #   - images/a_dot_ham.jpeg
