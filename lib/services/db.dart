@@ -10,8 +10,6 @@ class Respository {
   final databaseController = StreamController<List>();
   DatabaseFactory dbFactory = databaseFactoryIo;
 
-  Stream<List> get databaseStream => databaseController.stream;
-
   Respository() {
     getAllLetters();
   }
