@@ -33,8 +33,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
             children: [
               Container(
                 height: 300.0,
-                child:
-                    RiveAnimation.asset("assets/animations/ka-animation.riv"),
+                child: RiveAnimation.asset(widget.animationName),
               ),
               Text("text on how to write"),
               SizedBox(
