@@ -5,7 +5,6 @@ import 'package:mellinam/pages/completed.dart';
 import 'package:mellinam/pages/idaiyinam/main.dart';
 import 'package:mellinam/pages/mellinam/main.dart';
 import 'package:mellinam/pages/vallinam/main.dart';
-import 'package:mellinam/services/db.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -14,14 +13,14 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("மெல்லினம்"),
+        title: const Text("மெல்லினம்"),
         actions: [
           IconButton(
             onPressed: () => {
               Navigator.push(context,
-                  CupertinoPageRoute(builder: (context) => CompletedScreen()))
+                  CupertinoPageRoute(builder: (context) => const CompletedScreen()))
             },
-            icon: Icon(Icons.library_add_check_rounded),
+            icon: const Icon(Icons.library_add_check_rounded),
           )
         ],
       ),
@@ -44,7 +43,7 @@ class Home extends StatelessWidget {
                   height: 250.0,
                   child: MenuCard(
                       screen: MellinamScreen(),
-                      animationName: "assets/animations/ka-animation.riv",
+                      animationName: "assets/animations/nga-animation.riv",
                       title: "மெல்லினம்"),
                 )
               ]),
@@ -59,14 +58,14 @@ class Home extends StatelessWidget {
                         animationName: "assets/animations/ya-animation.riv",
                         title: "இடையினம்"),
                   ),
-                  Container(
-                    width: 180.0,
-                    height: 250.0,
-                    child: MenuCard(
-                        screen: VallinamHome(),
-                        animationName: "assets/animations/ka-animation.riv",
-                        title: "உயிர் எழுத்துகள்"),
-                  ),
+                  // Container(
+                  //   width: 180.0,
+                  //   height: 250.0,
+                  //   child: MenuCard(
+                  //       screen: VallinamHome(),
+                  //       animationName: "assets/animations/ka-animation.riv",
+                  //       title: "உயிர் எழுத்துகள்"),
+                  // ),
                 ],
               )
             ],
