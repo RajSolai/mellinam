@@ -38,6 +38,7 @@ dependencies:
   path_provider: ^2.0.7
   path: ^1.8.0
   sembast: ^3.1.1
+  flutter_launcher_icons: ^0.9.2
   confetti: ^0.6.0
 
 dev_dependencies:
@@ -50,6 +51,11 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^1.0.0
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/images/icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -82,11 +88,11 @@ flutter:
     - assets/animations/na1-animation.riv
     - assets/animations/nya-animation.riv
     - assets/animations/ma-animation.riv
-    # - assets/animations/na2-animation.riv
+    - assets/animations/na2-animation.riv
     #
     - assets/images/trophy.png
     - assets/letters.db
-  #   - images/a_dot_ham.jpeg
+    - assets/icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
