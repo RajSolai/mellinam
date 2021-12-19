@@ -32,7 +32,7 @@ Widget buildConfettiPage({controllerCenter, returnScreen, context}) {
                   color: Colors.purple,
                   child: Text("தொடரவும்"),
                   onPressed: () => {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       CupertinoPageRoute(builder: (context) => returnScreen),
                     )

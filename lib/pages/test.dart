@@ -25,6 +25,7 @@ class _TestScreenState extends State<TestScreen> {
   bool isPassed = false;
   LanguageModelManager languageModelManager =
       GoogleMlKit.vision.languageModelManager();
+  String statusText = "";
   DigitalInkRecogniser digitalInkRecogniser =
       GoogleMlKit.vision.digitalInkRecogniser();
   List<Offset?> _points = <Offset>[];
@@ -62,6 +63,8 @@ class _TestScreenState extends State<TestScreen> {
         isPassed = true;
         Respository()
             .addLetter("${widget.letterToCheck} - ${widget.groupName}");
+      } else {
+        statusText = "அச்சச்சோ, தவறான எழுத்து";
       }
       setState(() {});
     } catch (e) {
@@ -82,7 +85,7 @@ class _TestScreenState extends State<TestScreen> {
               controllerCenter: _controllerCenter,
               returnScreen: widget.returnScreen,
               context: context)
-          : buildTestPage(_points, onPanUpdateEvent, recognizeText, clearPad),
+          : buildTestPage(_points, onPanUpdateEvent, recognizeText, clearPad, statusText),
     );
   }
 

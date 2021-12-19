@@ -43,7 +43,7 @@ class MellinamScreen extends StatelessWidget {
                     group: groupName,
                     letter: "ண",
                     //! change it da yebba
-                    animation: "assets/animations/na1-animation.riv",
+                    animation: "assets/animations/na2-animation.riv",
                   ),
                   LetterCard(
                     returnScreen: this,

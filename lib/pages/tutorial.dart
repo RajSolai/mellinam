@@ -35,7 +35,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                 height: 300.0,
                 child: RiveAnimation.asset(widget.animationName),
               ),
-              Text("text on how to write"),
+              Text("${this.widget.letterName} எப்படி என்பதை அறிக"),
               SizedBox(
                 height: 50.0,
               ),
