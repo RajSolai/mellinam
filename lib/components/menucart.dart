@@ -36,7 +36,7 @@ class MenuCard extends StatelessWidget {
               ]),
           child: Column(
             children: [
-              Container(
+              SizedBox(
                   height: 200.0, child: RiveAnimation.asset(animationName)),
               Text(title)
             ],

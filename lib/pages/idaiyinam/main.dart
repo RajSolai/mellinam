@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mellinam/components/lettercart.dart';
-import 'package:mellinam/components/menucart.dart';
-import 'package:mellinam/pages/tutorial.dart';
 
 var groupName = "இடையினம்";
 
@@ -12,8 +10,8 @@ class IdaiyinamScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text("இடையின  வார்த்தைகள்"),
-         ),
+        title: const Text("இடையின  வார்த்தைகள்"),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

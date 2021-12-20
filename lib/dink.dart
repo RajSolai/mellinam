@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 
 class DigitalInkView extends StatefulWidget {
+  const DigitalInkView({Key? key}) : super(key: key);
+
   @override
   _DigitalInkViewState createState() => _DigitalInkViewState();
 }
@@ -18,7 +20,7 @@ class _DigitalInkViewState extends State<DigitalInkView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Digital Ink Recognition')),
+      appBar: AppBar(title: const Text('Digital Ink Recognition')),
       body: SafeArea(
         child: Column(
           children: [
@@ -37,7 +39,7 @@ class _DigitalInkViewState extends State<DigitalInkView> {
                       ),
                     )
                   ]),
-              margin: EdgeInsets.all(20.0),
+              margin: const EdgeInsets.all(20.0),
               height: 300.0,
               width: 300.0,
               child: GestureDetector(
@@ -54,7 +56,7 @@ class _DigitalInkViewState extends State<DigitalInkView> {
                 },
                 child: CustomPaint(
                   painter: Signature(points: _points),
-                  size: Size.fromHeight(300.0),
+                  size: const Size.fromHeight(300.0),
                 ),
               ),
             ),
@@ -64,16 +66,16 @@ class _DigitalInkViewState extends State<DigitalInkView> {
                 style: TextStyle(fontSize: 23),
               ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ElevatedButton(
-                    child: Text('Read Text'),
+                    child: const Text('Read Text'),
                     onPressed: _recogniseText,
                   ),
                   ElevatedButton(
-                    child: Text('Clear Pad'),
+                    child: const Text('Clear Pad'),
                     onPressed: _clearPad,
                   ),
                 ],

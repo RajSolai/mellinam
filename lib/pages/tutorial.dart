@@ -8,7 +8,7 @@ class TutorialScreen extends StatefulWidget {
   final String groupName;
   final Widget returnScreen;
   final String letterName;
-  TutorialScreen(
+  const TutorialScreen(
       {Key? key,
       required this.animationName,
       required this.groupName,
@@ -25,23 +25,23 @@ class _TutorialScreenState extends State<TutorialScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("${this.widget.groupName} ${this.widget.letterName}"),
+        title: Text("${widget.groupName} ${widget.letterName}"),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 height: 300.0,
                 child: RiveAnimation.asset(widget.animationName),
               ),
-              Text("${this.widget.letterName} எப்படி என்பதை அறிக"),
-              SizedBox(
+              Text("${widget.letterName} எப்படி என்பதை அறிக"),
+              const SizedBox(
                 height: 50.0,
               ),
               CupertinoButton(
                 color: Colors.purple,
-                child: Text("எழுதப் பழகுங்கள்"),
+                child: const Text("எழுதப் பழகுங்கள்"),
                 onPressed: () => {
                   Navigator.push(
                     context,

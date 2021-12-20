@@ -23,20 +23,20 @@ class _CompletedScreenState extends State<CompletedScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("கற்றுக்கொண்ட எழுத்துக்கள்"),
+        title: const Text("கற்றுக்கொண்ட எழுத்துக்கள்"),
       ),
       body: SafeArea(
         child: ListView.builder(
           itemCount: completedLetters.length,
           itemBuilder: (BuildContext context, int index) {
             return Padding(
-              padding: EdgeInsets.all(2.0),
+              padding: const EdgeInsets.all(2.0),
               child: Card(
                 child: Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(
                     completedLetters.elementAt(index),
-                    style: TextStyle(fontSize: 18.0),
+                    style: const TextStyle(fontSize: 18.0),
                   ),
                 ),
               ),

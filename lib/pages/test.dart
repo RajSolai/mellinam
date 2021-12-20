@@ -10,7 +10,7 @@ class TestScreen extends StatefulWidget {
   final Widget returnScreen;
   final String letterToCheck;
   final String groupName;
-  TestScreen(
+  const TestScreen(
       {Key? key,
       required this.returnScreen,
       required this.letterToCheck,
@@ -85,7 +85,8 @@ class _TestScreenState extends State<TestScreen> {
               controllerCenter: _controllerCenter,
               returnScreen: widget.returnScreen,
               context: context)
-          : buildTestPage(_points, onPanUpdateEvent, recognizeText, clearPad, statusText),
+          : buildTestPage(
+              _points, onPanUpdateEvent, recognizeText, clearPad, statusText),
     );
   }
 

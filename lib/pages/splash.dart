@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
-import 'package:mellinam/dink.dart';
 import 'package:mellinam/pages/home.dart';
 import 'package:rive/rive.dart';
 
@@ -21,7 +20,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> _isModelDownloaded() async {
     bool isDownloaded = await languageModelManager.isModelDownloaded('ta');
-    print("Model download status " + isDownloaded.toString());
     setState(() {
       isModelDownloaded = isDownloaded;
     });
@@ -29,12 +27,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> _downloadModel() async {
     languageModelManager.downloadModel('ta');
-    print('Downloading model...');
   }
 
   Widget _cancelTimer() {
     Future.delayed(const Duration(minutes: 2), () {});
-    return Home();
+    return const Home();
   }
 
   @override
@@ -51,16 +48,15 @@ class _SplashScreenState extends State<SplashScreen> {
       return Scaffold(
         body: Container(
           alignment: Alignment.center,
-          child: Column(children: [
-            const SizedBox(
+          child: Column(children: const [
+            SizedBox(
               height: 100.0,
             ),
-            Container(
+            SizedBox(
               height: 300.0,
-              child: const RiveAnimation.asset(
-                  "assets/animations/ka-animation.riv"),
+              child: RiveAnimation.asset("assets/animations/ka-animation.riv"),
             ),
-            const Text("தயவுசெய்து காத்திருக்கவும்")
+            Text("தயவுசெய்து காத்திருக்கவும்")
           ]),
         ),
       );

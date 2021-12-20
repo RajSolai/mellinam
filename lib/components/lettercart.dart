@@ -3,25 +3,32 @@ import 'package:mellinam/pages/tutorial.dart';
 import 'menucart.dart';
 
 class LetterCard extends StatelessWidget {
-  final returnScreen, group, letter, animation;
+  final Widget returnScreen;
+  final String group;
+  final String letter;
+  final String animation;
   const LetterCard(
-      {Key? key, this.returnScreen, this.group, this.letter, this.animation})
+      {Key? key,
+      required this.returnScreen,
+      required this.group,
+      required this.letter,
+      required this.animation})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 180.0,
       height: 250.0,
       child: MenuCard(
         screen: TutorialScreen(
-          returnScreen: this.returnScreen,
-          groupName: this.group,
-          letterName: this.letter,
-          animationName: this.animation,
+          returnScreen: returnScreen,
+          groupName: group,
+          letterName: letter,
+          animationName: animation,
         ),
-        animationName: this.animation,
-        title: this.letter,
+        animationName: animation,
+        title: letter,
       ),
     );
   }

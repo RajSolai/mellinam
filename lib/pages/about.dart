@@ -7,7 +7,7 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("மேலும் விவரங்கள்"),
+        title: const Text("மேலும் விவரங்கள்"),
       ),
       body: SafeArea(
         child: SingleChildScrollView(

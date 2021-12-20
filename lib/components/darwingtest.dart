@@ -24,7 +24,7 @@ Widget buildTestPage(List<Offset?> _points, onPanUpdateFunction, recognizeText,
                   ),
                 )
               ]),
-          margin: EdgeInsets.all(20.0),
+          margin: const EdgeInsets.all(20.0),
           height: 300.0,
           width: 300.0,
           child: GestureDetector(
@@ -37,7 +37,7 @@ Widget buildTestPage(List<Offset?> _points, onPanUpdateFunction, recognizeText,
             },
             child: CustomPaint(
               painter: Signature(points: _points),
-              size: Size.fromHeight(300.0),
+              size: const Size.fromHeight(300.0),
             ),
           ),
         ),
@@ -46,21 +46,19 @@ Widget buildTestPage(List<Offset?> _points, onPanUpdateFunction, recognizeText,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              margin: EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10.0),
               child: Row(
                 children: [
                   CupertinoButton(
                       color: Colors.purple,
-                      child: Text("எழுத்துக்களை அழிக்கவும்"),
+                      child: const Text("எழுத்துக்களை அழிக்கவும்"),
                       onPressed: clearPad)
                 ],
               ),
             )
           ],
         ),
-        Container(
-          child: Text(statusText),
-        )
+        Text(statusText, style: const TextStyle(fontWeight: FontWeight.bold))
       ],
     ),
   );

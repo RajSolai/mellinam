@@ -18,19 +18,19 @@ Widget buildConfettiPage({controllerCenter, returnScreen, context}) {
                   "assets/images/trophy.png",
                   height: MediaQuery.of(context).size.height / 6,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20.0,
                 ),
-                Text(
+                const Text(
                   "வாழ்த்துக்கள்",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28.0),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20.0,
                 ),
                 CupertinoButton(
                   color: Colors.purple,
-                  child: Text("தொடரவும்"),
+                  child: const Text("தொடரவும்"),
                   onPressed: () => {
                     Navigator.pushReplacement(
                       context,

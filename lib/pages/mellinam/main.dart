@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mellinam/components/lettercart.dart';
-import 'package:mellinam/components/menucart.dart';
-import 'package:mellinam/pages/tutorial.dart';
 
 var groupName = "மெல்லினம்";
 
@@ -12,7 +10,7 @@ class MellinamScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("மெல்லின வார்த்தைகள்"),
+        title: const Text("மெல்லின வார்த்தைகள்"),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -42,7 +40,6 @@ class MellinamScreen extends StatelessWidget {
                     returnScreen: this,
                     group: groupName,
                     letter: "ண",
-                    //! change it da yebba
                     animation: "assets/animations/na2-animation.riv",
                   ),
                   LetterCard(

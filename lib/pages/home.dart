@@ -32,39 +32,41 @@ class Home extends StatelessWidget {
           child: Column(
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-                Container(
-                  width: 180.0,
-                  height: 250.0,
-                  child: const MenuCard(
-                      screen: VallinamHome(),
-                      animationName: "assets/animations/ka-animation.riv",
-                      title: "வல்லினம்"),
-                ),
-                Container(
-                  width: 180.0,
-                  height: 250.0,
-                  child: const MenuCard(
-                      screen: MellinamScreen(),
-                      animationName: "assets/animations/nga-animation.riv",
-                      title: "மெல்லினம்"),
-                )
-              ]),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: const [
+                    SizedBox(
+                      width: 180.0,
+                      height: 250.0,
+                      child: MenuCard(
+                          screen: VallinamHome(),
+                          animationName: "assets/animations/ka-animation.riv",
+                          title: "வல்லினம்"),
+                    ),
+                    SizedBox(
+                      width: 180.0,
+                      height: 250.0,
+                      child: MenuCard(
+                          screen: MellinamScreen(),
+                          animationName: "assets/animations/nga-animation.riv",
+                          title: "மெல்லினம்"),
+                    )
+                  ]),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
+                children: const [
+                  SizedBox(
                     width: 180.0,
                     height: 250.0,
-                    child: const MenuCard(
+                    child: MenuCard(
                         screen: IdaiyinamScreen(),
                         animationName: "assets/animations/ya-animation.riv",
                         title: "இடையினம்"),
                   ),
-                  Container(
+                  SizedBox(
                     width: 180.0,
                     height: 250.0,
-                    child: const MenuCard(
+                    child: MenuCard(
                         screen: AboutPage(),
                         animationName: "assets/animations/info-animation.riv",
                         title: "மேலும்"),
