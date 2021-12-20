@@ -90,6 +90,7 @@ flutter:
     - assets/animations/ma-animation.riv
     - assets/animations/na2-animation.riv
     #
+    - assets/animations/info-animation.riv
     - assets/images/trophy.png
     - assets/letters.db
     - assets/icon.png

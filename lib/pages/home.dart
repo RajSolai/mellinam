@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mellinam/components/menucart.dart';
+import 'package:mellinam/pages/about.dart';
 import 'package:mellinam/pages/completed.dart';
 import 'package:mellinam/pages/idaiyinam/main.dart';
 import 'package:mellinam/pages/mellinam/main.dart';
@@ -17,8 +18,10 @@ class Home extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () => {
-              Navigator.push(context,
-                  CupertinoPageRoute(builder: (context) => const CompletedScreen()))
+              Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                      builder: (context) => const CompletedScreen()))
             },
             icon: const Icon(Icons.library_add_check_rounded),
           )
@@ -33,7 +36,7 @@ class Home extends StatelessWidget {
                 Container(
                   width: 180.0,
                   height: 250.0,
-                  child: MenuCard(
+                  child: const MenuCard(
                       screen: VallinamHome(),
                       animationName: "assets/animations/ka-animation.riv",
                       title: "வல்லினம்"),
@@ -41,7 +44,7 @@ class Home extends StatelessWidget {
                 Container(
                   width: 180.0,
                   height: 250.0,
-                  child: MenuCard(
+                  child: const MenuCard(
                       screen: MellinamScreen(),
                       animationName: "assets/animations/nga-animation.riv",
                       title: "மெல்லினம்"),
@@ -53,19 +56,19 @@ class Home extends StatelessWidget {
                   Container(
                     width: 180.0,
                     height: 250.0,
-                    child: MenuCard(
+                    child: const MenuCard(
                         screen: IdaiyinamScreen(),
                         animationName: "assets/animations/ya-animation.riv",
                         title: "இடையினம்"),
                   ),
-                  // Container(
-                  //   width: 180.0,
-                  //   height: 250.0,
-                  //   child: MenuCard(
-                  //       screen: VallinamHome(),
-                  //       animationName: "assets/animations/ka-animation.riv",
-                  //       title: "உயிர் எழுத்துகள்"),
-                  // ),
+                  Container(
+                    width: 180.0,
+                    height: 250.0,
+                    child: const MenuCard(
+                        screen: AboutPage(),
+                        animationName: "assets/animations/info-animation.riv",
+                        title: "மேலும்"),
+                  ),
                 ],
               )
             ],
