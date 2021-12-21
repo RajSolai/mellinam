@@ -56,7 +56,11 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 300.0,
               child: RiveAnimation.asset("assets/animations/ka-animation.riv"),
             ),
-            Text("தயவுசெய்து காத்திருக்கவும்")
+            Text("தயவுசெய்து காத்திருக்கவும்"),
+            Padding(
+                padding: EdgeInsets.all(2.0),
+                child: Text(
+                    "பயன்பாட்டின் முதல் தொடக்கத்திற்காக இணையத்தை இயக்கவும்"))
           ]),
         ),
       );
