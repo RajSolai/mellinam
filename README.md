@@ -4,7 +4,7 @@
 
 ## இங்கே பதிவிறக்கவும்
 
-[பதிவிறக்க இங்கே கிளிக் செய்யவும்](https://github.com/RajSolai/mellinam/releases/download/v1.0.0/app-release.apk)
+[பதிவிறக்க இங்கே கிளிக் செய்யவும்](https://github.com/RajSolai/mellinam/releases/download/v1.0.0/mellinam-1.0.apk)
 
 ## ஸ்கிரீன்ஷோட்சு (Screenshots)
 
