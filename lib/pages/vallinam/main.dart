@@ -62,8 +62,8 @@ class VallinamHome extends StatelessWidget {
                   LetterCard(
                     returnScreen: this,
                     group: groupName,
-                    letter: "ர",
-                    animation: "assets/animations/ra-animation.riv",
+                    letter: "ற",
+                    animation: "assets/animations/ra-vali-animation.riv",
                   ),
                 ],
               )
