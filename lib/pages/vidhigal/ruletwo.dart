@@ -11,6 +11,7 @@ class RuleTwo extends StatelessWidget {
         ),
         body: SafeArea(
           child: ListView(
+            padding: EdgeInsets.all(10.0),
             children: const [
               Text(
                   "ல்‌, ள்‌ ஆகிய எழுத்துக்களுக்குப்‌ பின்பு ய,வ எழுத்துக்கள்‌ மயங்கிவரும்‌."),

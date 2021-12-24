@@ -21,15 +21,15 @@ class LetterCard extends StatelessWidget {
       width: 180.0,
       height: 250.0,
       child: MenuCard(
-        screen: TutorialScreen(
-          returnScreen: returnScreen,
-          groupName: group,
-          letterName: letter,
+          screen: TutorialScreen(
+            returnScreen: returnScreen,
+            groupName: group,
+            letterName: letter,
+            animationName: animation,
+          ),
           animationName: animation,
-        ),
-        animationName: animation,
-        title: letter,
-      ),
+          title: letter,
+          isAnim: true),
     );
   }
 }

@@ -11,10 +11,12 @@ class RuleFive extends StatelessWidget {
         ),
         body: SafeArea(
           child: ListView(
+            padding: EdgeInsets.all(10.0),
             children: const [
               Text(
                   "ம்‌ எழுத்துக்களுக்குப்‌ பின்பு ய எழுத்து மயஙகி வருவதைப்போல்‌ வஎழுத்தும்‌ மயங்கி வரும்‌."),
-              Text("௭-டு. நிலம்வலிது.")
+              Text("௭-டு. நிலம்வலிது.",
+                  style: TextStyle(fontWeight: FontWeight.bold))
             ],
           ),
         ));

@@ -11,6 +11,7 @@ class RuleOne extends StatelessWidget {
         ),
         body: SafeArea(
           child: ListView(
+            padding: EdgeInsets.all(10.0),
             children: const [
               Text("ஒரு சொல்லில் ட்‌,ற்‌, ல்‌, ள்‌ ஆகிய"),
               Text(

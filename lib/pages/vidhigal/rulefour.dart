@@ -14,7 +14,8 @@ class RuleFour extends StatelessWidget {
             children: const [
               Text("ஞ்,ந்‌,ம்,வ்"),
               Text("எழுத்துக்களுக்குப்‌ பின்பு யஎழுத்து மயங்கி வரும்‌."),
-              Text("எ-டு. உரிஞ்யாது, தெவ்யாது.")
+              Text("எ-டு. உரிஞ்யாது, தெவ்யாது.",
+                  style: TextStyle(fontWeight: FontWeight.bold))
             ],
           ),
         ));

@@ -5,11 +5,13 @@ class MenuCard extends StatelessWidget {
   final String animationName;
   final Widget screen;
   final String title;
+  final bool isAnim;
   const MenuCard(
       {Key? key,
       required this.screen,
       required this.animationName,
-      required this.title})
+      required this.title,
+      required this.isAnim})
       : super(key: key);
 
   @override
@@ -37,7 +39,10 @@ class MenuCard extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                  height: 200.0, child: RiveAnimation.asset(animationName)),
+                  height: 200.0,
+                  child: isAnim
+                      ? RiveAnimation.asset(animationName)
+                      : Image.asset(animationName,width: 120.0)),
               Text(title)
             ],
           ),

@@ -42,7 +42,8 @@ class Home extends StatelessWidget {
                       child: MenuCard(
                           screen: VallinamHome(),
                           animationName: "assets/animations/ka-animation.riv",
-                          title: "வல்லினம்"),
+                          title: "வல்லினம்",
+                          isAnim: true),
                     ),
                     SizedBox(
                       width: 180.0,
@@ -50,7 +51,8 @@ class Home extends StatelessWidget {
                       child: MenuCard(
                           screen: MellinamScreen(),
                           animationName: "assets/animations/nga-animation.riv",
-                          title: "மெல்லினம்"),
+                          title: "மெல்லினம்",
+                          isAnim: true),
                     )
                   ]),
               Row(
@@ -60,25 +62,31 @@ class Home extends StatelessWidget {
                     width: 180.0,
                     height: 250.0,
                     child: MenuCard(
-                        screen: IdaiyinamScreen(),
-                        animationName: "assets/animations/ya-animation.riv",
-                        title: "இடையினம்"),
+                      screen: IdaiyinamScreen(),
+                      animationName: "assets/animations/ya-animation.riv",
+                      title: "இடையினம்",
+                      isAnim: true,
+                    ),
                   ),
                   SizedBox(
                     width: 180.0,
                     height: 250.0,
                     child: MenuCard(
-                        screen: AboutPage(),
-                        animationName: "assets/animations/info-animation.riv",
-                        title: "மேலும்"),
+                      screen: AboutPage(),
+                      animationName: "assets/animations/info-animation.riv",
+                      title: "மேலும்",
+                      isAnim: true,
+                    ),
                   ),
                   SizedBox(
                     width: 180.0,
                     height: 250.0,
                     child: MenuCard(
-                        screen: VidigalMenuScreen(),
-                        animationName: "assets/images/rules.png",
-                        title: "பிழையின்றி எழுத விதிகள்"),
+                      screen: VidigalMenuScreen(),
+                      animationName: "assets/images/rules.png",
+                      title: "எழுத விதிகள்",
+                      isAnim: false,
+                    ),
                   ),
                 ],
               )
