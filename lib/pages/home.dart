@@ -6,6 +6,7 @@ import 'package:mellinam/pages/completed.dart';
 import 'package:mellinam/pages/idaiyinam/main.dart';
 import 'package:mellinam/pages/mellinam/main.dart';
 import 'package:mellinam/pages/vallinam/main.dart';
+import 'package:mellinam/pages/vidhigal/main.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -70,6 +71,14 @@ class Home extends StatelessWidget {
                         screen: AboutPage(),
                         animationName: "assets/animations/info-animation.riv",
                         title: "மேலும்"),
+                  ),
+                  SizedBox(
+                    width: 180.0,
+                    height: 250.0,
+                    child: MenuCard(
+                        screen: VidigalMenuScreen(),
+                        animationName: "assets/images/rules.png",
+                        title: "பிழையின்றி எழுத விதிகள்"),
                   ),
                 ],
               )
