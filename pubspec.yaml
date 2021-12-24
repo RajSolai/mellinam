@@ -92,6 +92,7 @@ flutter:
     #
     - assets/animations/info-animation.riv
     - assets/images/trophy.png
+    - assets/images/information.png
     - assets/images/rules.png
     - assets/letters.db
     - assets/icon.png

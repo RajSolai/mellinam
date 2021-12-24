@@ -73,9 +73,9 @@ class Home extends StatelessWidget {
                     height: 250.0,
                     child: MenuCard(
                       screen: AboutPage(),
-                      animationName: "assets/animations/info-animation.riv",
+                      animationName: "assets/images/information.png",
                       title: "மேலும்",
-                      isAnim: true,
+                      isAnim: false,
                     ),
                   ),
                 ],
