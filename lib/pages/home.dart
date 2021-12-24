@@ -78,6 +78,11 @@ class Home extends StatelessWidget {
                       isAnim: true,
                     ),
                   ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
                   SizedBox(
                     width: 180.0,
                     height: 250.0,
@@ -89,7 +94,7 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
